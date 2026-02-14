@@ -347,7 +347,7 @@ Join our Sangha on Discord and please send a friend request to Dhammarato
 Connect with friends, teachers, and explore places to visit and stay
 
 **Youtube** — [Dhammarato Dhamma - YouTube](https://www.youtube.com/@DhammaratoDhamma)
-Transcriptions and summaries of these calls are available to read
+Videos of Sanghas and One-on-One Calls
 
 🎧 **Podcast** — [Podbean](https://dhammaratodhamma.podbean.com/)
 Find our content on Spotify, Apple Podcasts, and more by visiting Podbean
