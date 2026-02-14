@@ -1,0 +1,225 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = await getCollection('blog');
+
+// Create searchable content from the raw markdown body
+const postsWithContent = posts.map((post) => ({
+	...post,
+	searchableContent: post.body.toLowerCase().replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').slice(0, 500)
+}));
+
+const sortedPosts = postsWithContent.sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Transcripts | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 2rem 1rem;
+			}
+			.search-container {
+				margin-bottom: 2rem;
+				padding: 1.5rem;
+				background: rgb(var(--gray-light));
+				border-radius: 8px;
+			}
+			.search-box {
+				width: 100%;
+				padding: 0.75rem 1rem;
+				font-size: 1rem;
+				border: 2px solid rgb(var(--gray-light));
+				border-radius: 4px;
+				transition: border-color 0.3s;
+				box-sizing: border-box;
+			}
+			.search-box:focus {
+				outline: none;
+				border-color: var(--accent);
+			}
+			.results-count {
+				margin-top: 0.5rem;
+				color: rgb(var(--gray));
+				font-size: 0.9rem;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 2rem;
+				color: rgb(var(--black));
+			}
+			.transcript-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.transcript-item {
+				padding: 1.25rem;
+				margin-bottom: 1rem;
+				background: #fffcf7;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 8px;
+				transition: all 0.2s ease;
+			}
+			.transcript-item:hover {
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				border-color: var(--accent);
+			}
+			.transcript-link {
+				text-decoration: none;
+				color: inherit;
+				display: block;
+			}
+			.transcript-title {
+				margin: 0 0 0.5rem 0;
+				font-size: 1.25rem;
+				color: rgb(var(--black));
+				line-height: 1.4;
+			}
+			.transcript-meta {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				color: rgb(var(--gray));
+				font-size: 0.9rem;
+			}
+			.transcript-date {
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+			}
+			.youtube-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.25rem;
+				color: #ff0000;
+				text-decoration: none;
+			}
+			.youtube-link:hover {
+				text-decoration: underline;
+			}
+			.hidden {
+				display: none;
+			}
+			.no-results {
+				text-align: center;
+				padding: 3rem;
+				color: rgb(var(--gray));
+			}
+			@media (max-width: 720px) {
+				.transcript-title {
+					font-size: 1.1rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Dhamma Talk Transcripts</h1>
+
+			<div class="search-container">
+				<input
+					type="text"
+					id="searchBox"
+					class="search-box"
+					placeholder="Search transcripts by title, date, or content..."
+					autocomplete="off"
+				/>
+				<div class="results-count" id="resultsCount">
+					{sortedPosts.length} transcripts available
+				</div>
+			</div>
+
+			<ul class="transcript-list" id="transcriptList">
+				{sortedPosts.map((post) => (
+					<li class="transcript-item"
+						data-title={post.data.title.toLowerCase()}
+						data-date={post.data.pubDate.toISOString()}
+						data-content={post.searchableContent}>
+						<a href={`/blog/${post.id}/`} class="transcript-link">
+							<h2 class="transcript-title">{post.data.title}</h2>
+							<div class="transcript-meta">
+								<span class="transcript-date">
+									📅 <FormattedDate date={post.data.pubDate} />
+								</span>
+								{post.data.youtube && (
+									<a
+										href={`https://youtube.com/watch?v=${post.data.youtube}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="youtube-link"
+										onclick="event.stopPropagation();"
+									>
+										▶️ Watch on YouTube
+									</a>
+								)}
+							</div>
+						</a>
+					</li>
+				))}
+			</ul>
+
+			<div class="no-results hidden" id="noResults">
+				No transcripts found matching your search.
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			const searchBox = document.getElementById('searchBox') as HTMLInputElement;
+			const transcriptList = document.getElementById('transcriptList');
+			const transcriptItems = transcriptList?.querySelectorAll('.transcript-item');
+			const resultsCount = document.getElementById('resultsCount');
+			const noResults = document.getElementById('noResults');
+
+			searchBox?.addEventListener('input', (e) => {
+				const searchTerm = (e.target as HTMLInputElement).value.toLowerCase();
+				let visibleCount = 0;
+
+				transcriptItems?.forEach((item) => {
+					const title = item.getAttribute('data-title') || '';
+					const date = item.getAttribute('data-date') || '';
+					const content = item.getAttribute('data-content') || '';
+
+					if (title.includes(searchTerm) || date.includes(searchTerm) || content.includes(searchTerm)) {
+						(item as HTMLElement).classList.remove('hidden');
+						visibleCount++;
+					} else {
+						(item as HTMLElement).classList.add('hidden');
+					}
+				});
+
+				// Update results count
+				if (resultsCount) {
+					if (searchTerm) {
+						resultsCount.textContent = `${visibleCount} transcript${visibleCount !== 1 ? 's' : ''} found`;
+					} else {
+						resultsCount.textContent = `${transcriptItems?.length || 0} transcripts available`;
+					}
+				}
+
+				// Show/hide no results message
+				if (noResults && transcriptList) {
+					if (visibleCount === 0 && searchTerm) {
+						noResults.classList.remove('hidden');
+						transcriptList.classList.add('hidden');
+					} else {
+						noResults.classList.add('hidden');
+						transcriptList.classList.remove('hidden');
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

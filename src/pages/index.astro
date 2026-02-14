@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import buddhaJoy from '../assets/buddha-joy.png';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="hero-image">
+				<Image
+					src={buddhaJoy}
+					alt="Joyful Buddha"
+					width={200}
+					height={200}
+				/>
+			</div>
+			<h1>Welcome to Dhammarato Transcripts</h1>
+			<p class="subtitle">
+				A collection of transcribed Dhamma talks by Dhammarato, exploring the Buddha's teachings
+				on meditation, mindfulness, and the path to liberation.
+			</p>
+			<div class="cta">
+				<a href="/blog" class="cta-button">
+					Browse All Transcripts
+				</a>
+			</div>
+			<p class="note">
+				All talks are available as text transcripts, with links to the original YouTube videos where available.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+		text-align: center;
+	}
+	.hero-image {
+		margin-bottom: 1.5rem;
+	}
+	.hero-image img {
+		margin: 0 auto;
+		display: block;
+	}
+	h1 {
+		color: rgb(var(--black));
+		margin-bottom: 1rem;
+	}
+	.subtitle {
+		font-size: 1.1rem;
+		color: rgb(var(--gray));
+		margin-bottom: 2rem;
+	}
+	.cta {
+		margin: 2rem 0;
+	}
+	.cta-button {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background: var(--accent);
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: bold;
+		transition: all 0.2s;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+	.cta-button:hover {
+		background: var(--accent-dark);
+		transform: scale(1.05);
+		color: white;
+	}
+	.note {
+		color: rgb(var(--gray));
+		font-size: 0.9rem;
+	}
+</style>
