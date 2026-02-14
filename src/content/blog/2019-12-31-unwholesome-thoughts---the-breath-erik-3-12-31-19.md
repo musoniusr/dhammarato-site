@@ -226,12 +226,19 @@ This Dhamma talk by Dhammarato contrasts the Buddhist approach to dealing with '
 - **Apply this in Therapy:** When in a therapy session, and asked to recall the past, acknowledge it but move forward into the present moment. Practice feeling good and let go of the desire to dwell in the past.
 - **Sing Zip-a-dee-doo-dah:** Don't take yourself too seriously and remember to stay in the present moment.
 
-### Participate in one of our Live Sanghas (Free of Charge)
+### Connect with Dhammarato and Sangha Friends
 
-<p>►The Sangha US, Friday 7 PM PDT <a href="https://join.skype.com/uyYzUwJ3e3TO">Join Skype Call</a>.</p>
+☸️ **Dhamma Friends Discord** — [Join our Discord](https://discord.com/invite/kmQUUJysZJ)
+Join our Sangha on Discord and please send a friend request to Dhammarato
 
-<p>►The Sangha UK, Sunday 10AM BST <a href="https://join.skype.com/w6nFHnra6vdh">Join Skype Call</a>.</p>
+🌐 **Open Sangha Foundation** — [opensanghafoundation.org](https://opensanghafoundation.org/)
+Connect with friends, teachers, and explore places to visit and stay
 
-<p>►The Sangha UK, Wednesday 7PM BST <a href="https://join.skype.com/w6nFHnra6vdh">Join Skype Call</a>.</p>
+▶️ **Youtube** — [Dhammarato Dhamma - YouTube](https://www.youtube.com/@DhammaratoDhamma)
+Videos of Sanghas and One-on-One Calls
 
-There is nothing like direct transmission of the teachings in a one-to-one or one-to-group (Sangha) format from a skilled teacher. We encourage you to participate in our weekly Sanghas.
+🎧 **Podcast** — [Podbean](https://dhammaratodhamma.podbean.com/)
+Find our content on Spotify, Apple Podcasts, and more by visiting Podbean
+
+📧 **E-mail Dhammarato** — dhammarato16@gmail.com
+Please put name, age, location and practice info when sending an e-mail
