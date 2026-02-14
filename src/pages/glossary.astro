@@ -1,0 +1,238 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Glossary | ${SITE_TITLE}`} description="Dhammarato Dhamma Glossary - Buddhist Vocabulary" />
+		<style>
+			main {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 2rem 1rem;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 0.5rem;
+			}
+			.subtitle {
+				text-align: center;
+				color: rgb(var(--gray));
+				margin-bottom: 2rem;
+			}
+			dl {
+				margin: 0;
+			}
+			dt {
+				font-weight: 700;
+				color: rgb(var(--black));
+				margin-top: 1.25rem;
+				font-size: 1.1rem;
+			}
+			dd {
+				margin-left: 0;
+				padding-left: 1rem;
+				border-left: 3px solid var(--accent);
+				color: rgb(var(--gray-dark));
+				margin-top: 0.25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Dhamma Glossary</h1>
+			<p class="subtitle">Buddhist Vocabulary</p>
+
+			<dl>
+				<dt>Anagami</dt>
+				<dd>Non-returner; the third stage of enlightenment.</dd>
+
+				<dt>Anapanasati</dt>
+				<dd>Cultivating awareness and presence through the continuous observation of the breath as it moves in and out of the body.</dd>
+
+				<dt>Anicca</dt>
+				<dd>The constant and ever-changing nature of all phenomena.</dd>
+
+				<dt>Arahant</dt>
+				<dd>Someone who has gone beyond their defilements.</dd>
+
+				<dt>Arhat</dt>
+				<dd>Worthy one; an enlightened being who has attained nirvana.</dd>
+
+				<dt>Arya</dt>
+				<dd>Noble; one who has attained some level of enlightenment.</dd>
+
+				<dt>Bhavana</dt>
+				<dd>Mental development; cultivation of the mind through meditation.</dd>
+
+				<dt>Bhikkhuni</dt>
+				<dd>Nun; a fully ordained female Buddhist monastic.</dd>
+
+				<dt>Bhikku/Bhante</dt>
+				<dd>A male monk.</dd>
+
+				<dt>Bodhisattva</dt>
+				<dd>Enlightenment being; one who seeks enlightenment for the sake of all beings.</dd>
+
+				<dt>Citta</dt>
+				<dd>Mind; the heart-mind, center of consciousness.</dd>
+
+				<dt>Dhamma</dt>
+				<dd>Most often used to refer to the teaching of the Buddha. It can also mean "thing" among other definitions.</dd>
+
+				<dt>Dharma</dt>
+				<dd>The same as Dhamma but used more often, a Sanskrit word.</dd>
+
+				<dt>Dukkha</dt>
+				<dd>Mental attitude of dissatisfaction.</dd>
+
+				<dt>Hinayana</dt>
+				<dd>Lesser vehicle; a term used to describe early Buddhist schools.</dd>
+
+				<dt>Jhana</dt>
+				<dd>Meditative states, 1-4 form jhanas and 4 formless jhanas in the 4th jhana can occur.</dd>
+
+				<dt>Kamma</dt>
+				<dd>Essentially the law of cause and effect, emphasizing the consequences of one's actions.</dd>
+
+				<dt>Karuna</dt>
+				<dd>Compassion; empathy and concern for the suffering of others.</dd>
+
+				<dt>Mahayana</dt>
+				<dd>Great vehicle; a major branch of Buddhism emphasizing the bodhisattva path.</dd>
+
+				<dt>Mandala</dt>
+				<dd>Sacred diagram; used in meditation and rituals.</dd>
+
+				<dt>Mantra</dt>
+				<dd>Sacred syllable or phrase; used in meditation and rituals.</dd>
+
+				<dt>Mara</dt>
+				<dd>The tempter; a deity who represents the forces antagonistic to enlightenment.</dd>
+
+				<dt>Marga</dt>
+				<dd>Path; the Noble Eightfold Path leading to enlightenment.</dd>
+
+				<dt>Metta</dt>
+				<dd>Loving-kindness; unconditional love and goodwill towards all beings. Mental attitude of friendliness. Metta is a result of correct practice of anapanasati and not a practice the Buddha taught on its own.</dd>
+
+				<dt>Mudita</dt>
+				<dd>Sympathetic joy; rejoicing in the happiness and success of others.</dd>
+
+				<dt>Mudra</dt>
+				<dd>Hand gesture; symbolic gestures used in Buddhist practice.</dd>
+
+				<dt>Nibbana</dt>
+				<dd>Literally means "to cool down". In the time of the Buddha nibbana was an ordinary word to describe cooling down like we use it in modern English.</dd>
+
+				<dt>Nirodha</dt>
+				<dd>To stop, to cease, ending of.</dd>
+
+				<dt>Nivarana</dt>
+				<dd>Hindrances; mental factors that impede progress in meditation.</dd>
+
+				<dt>Panna</dt>
+				<dd>Wisdom; understanding the true nature of reality.</dd>
+
+				<dt>Paramita</dt>
+				<dd>Perfections; virtues cultivated by bodhisattvas on their path to enlightenment.</dd>
+
+				<dt>Parinibbana</dt>
+				<dd>Final nirvana; the complete extinction of all defilements and the end of the cycle of rebirth.</dd>
+
+				<dt>Paticcasamuppada</dt>
+				<dd>Dependent origination; the chain of cause and effect that describes the process of birth, life, and death.</dd>
+
+				<dt>Panna</dt>
+				<dd>Wisdom or insight.</dd>
+
+				<dt>Piti</dt>
+				<dd>The feeling of success. When we repeatedly make changes to the wholesome we start to see that "I can really do this!".</dd>
+
+				<dt>Prajna</dt>
+				<dd>Insight; deep understanding of the nature of reality.</dd>
+
+				<dt>Puja</dt>
+				<dd>Worship; rituals and offerings made to the Buddha or deities. Pujas are usually done in the morning and evening in temples.</dd>
+
+				<dt>Saddha</dt>
+				<dd>Faith; confidence in the Buddha, Dhamma, and Sangha.</dd>
+
+				<dt>Sakadagami</dt>
+				<dd>Once-returner; the second stage of enlightenment.</dd>
+
+				<dt>Samadhi</dt>
+				<dd>Unification of mind. When the mind feels happy, successful and is free from hindrances it stops wanting anything.</dd>
+
+				<dt>Samatha</dt>
+				<dd>Tranquillity meditation; meditation aimed at calming the mind.</dd>
+
+				<dt>Samma Sanghappa</dt>
+				<dd>Right resolve; involves the commitment to renunciation, compassion, and non-harming.</dd>
+
+				<dt>Samsara</dt>
+				<dd>The cycle of birth and death; the continual cycle of existence in various forms.</dd>
+
+				<dt>Samskara</dt>
+				<dd>Mental formations; volitional formations or predispositions.</dd>
+
+				<dt>Sangha</dt>
+				<dd>The Buddhist community of monks, nuns, novices and lay people.</dd>
+
+				<dt>Sankhara</dt>
+				<dd>Formations; mental formations or conditioned phenomena.</dd>
+
+				<dt>Sati</dt>
+				<dd>Mindfulness; awareness and attention to the present moment. The ability to maintain awareness and recollection in the present moment.</dd>
+
+				<dt>Sila</dt>
+				<dd>Moral conduct. How we behave ourselves impacts our mental wellbeing. The Buddha set out a number of guidelines in the Patimokkha and Vinaya.</dd>
+
+				<dt>Sotapanna</dt>
+				<dd>Stream-enterer; the first stage of enlightenment.</dd>
+
+				<dt>Sukkha</dt>
+				<dd>The opposite of dukkha. Satisfaction which means whenever we're in sukkha we do not have dukkha.</dd>
+
+				<dt>Sunyata</dt>
+				<dd>Emptiness; the concept that all phenomena are devoid of intrinsic existence.</dd>
+
+				<dt>Tanha</dt>
+				<dd>Craving; desire and attachment that lead to suffering.</dd>
+
+				<dt>Tathagata</dt>
+				<dd>Thus-gone one; an epithet for the Buddha.</dd>
+
+				<dt>Upadana</dt>
+				<dd>Clinging; attachment to ideas, objects, or desires.</dd>
+
+				<dt>Upaya</dt>
+				<dd>Skillful means; the use of various methods to teach the Dhamma.</dd>
+
+				<dt>Upekkha</dt>
+				<dd>Equanimity; balanced state of mind, unaffected by highs and lows.</dd>
+
+				<dt>Vajrayana</dt>
+				<dd>Diamond vehicle; a form of Buddhism emphasizing esoteric practices.</dd>
+
+				<dt>Vedana</dt>
+				<dd>Sensation; feelings that arise from sensory contact.</dd>
+
+				<dt>Vinaya</dt>
+				<dd>Discipline; the regulatory framework for the monastic community.</dd>
+
+				<dt>Vipassana</dt>
+				<dd>The cultivation of direct insight into the true nature of reality.</dd>
+
+				<dt>Viriya</dt>
+				<dd>Effort; persistent effort in the practice of the Dhamma.</dd>
+			</dl>
+		</main>
+		<Footer />
+	</body>
+</html>
