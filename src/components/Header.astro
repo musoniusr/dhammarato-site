@@ -6,7 +6,11 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+		<input type="checkbox" id="menu-toggle" class="menu-toggle" />
+		<label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
+			<span class="hamburger"></span>
+		</label>
+		<div class="nav-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Transcripts</HeaderLink>
 			<HeaderLink href="/glossary">Glossary</HeaderLink>
@@ -28,7 +32,6 @@ import HeaderLink from './HeaderLink.astro';
 		margin: 0;
 		font-size: 1em;
 	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
@@ -37,6 +40,7 @@ import HeaderLink from './HeaderLink.astro';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -48,19 +52,76 @@ import HeaderLink from './HeaderLink.astro';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
-	.internal-links {
+	.nav-links {
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 	}
+	.menu-toggle {
+		display: none !important;
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	.menu-button {
+		display: none;
+		cursor: pointer;
+		padding: 0.5em;
+	}
+	.hamburger,
+	.hamburger::before,
+	.hamburger::after {
+		display: block;
+		width: 24px;
+		height: 3px;
+		background: rgb(var(--black));
+		border-radius: 2px;
+		transition: all 0.3s;
+		position: relative;
+	}
+	.hamburger::before,
+	.hamburger::after {
+		content: '';
+		position: absolute;
+		left: 0;
+	}
+	.hamburger::before {
+		top: -7px;
+	}
+	.hamburger::after {
+		top: 7px;
+	}
+
 	@media (max-width: 720px) {
-		nav {
-			flex-direction: column;
-			align-items: flex-start;
+		.menu-button {
+			display: block;
 		}
-		nav a {
-			padding: 0.5em 0.4em;
-			font-size: 0.9rem;
+		.nav-links {
+			display: none;
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 0.5em;
+		}
+		.nav-links a {
+			width: 100%;
+			padding: 0.6em 0;
+			font-size: 0.95rem;
+			border-bottom: none;
+		}
+		.menu-toggle:checked ~ .nav-links {
+			display: flex;
+		}
+		/* Animate hamburger to X */
+		.menu-toggle:checked ~ .menu-button .hamburger {
+			background: transparent;
+		}
+		.menu-toggle:checked ~ .menu-button .hamburger::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+		.menu-toggle:checked ~ .menu-button .hamburger::after {
+			top: 0;
+			transform: rotate(-45deg);
 		}
 	}
 </style>
