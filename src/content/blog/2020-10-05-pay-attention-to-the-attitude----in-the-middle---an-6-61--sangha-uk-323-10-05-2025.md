@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pay Attention to the Attitude & "In the Middle" (AN 6 61) Sangha UK 323 10 05 2025"
+title: 'Pay Attention to the Attitude & "In the Middle" (AN 6 61) Sangha UK 323 10 05 2025'
 pubDate: 2020-10-05
 author: Dhammarato
 categories: [transcripts, Dhamma Talk]

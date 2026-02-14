@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Time Structuring & "Not My Business" UK Sangha 321 09 21 25"
+title: 'Time Structuring & "Not My Business" UK Sangha 321 09 21 25'
 pubDate: 2025-09-21
 author: Dhammarato
 categories: [transcripts, Dhamma Talk]
