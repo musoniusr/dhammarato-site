@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rebirth and Reincarnation The Sangha UK 236 07 28 28"
-pubDate: 2028-07-28
+pubDate: 2024-07-28
 author: Dhammarato
 categories: [transcripts, Dhamma Talk]
 tags: [transcripts, anatta, anicca, dukkha, patticasamuppada, sankhara, consciousness, rebirth, reincarnation, karma, brahmin, eightfold-noble-path, sangha-us, dhamma-talk, historical-context, doctrinal-analysis, mental-states, self-preservation, personality-view, liberation]
