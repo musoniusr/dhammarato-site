@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't Hate "Hate", Be Happy To See It Jonas 3 06 08 24"
+title: 'Don''t Hate "Hate", Be Happy To See It Jonas 3 06 08 24'
 pubDate: 2024-06-08
 author: Dhammarato
 categories: [transcripts, Dhamma Talk]
