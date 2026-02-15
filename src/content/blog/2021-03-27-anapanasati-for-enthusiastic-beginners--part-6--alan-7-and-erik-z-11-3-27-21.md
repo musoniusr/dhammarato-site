@@ -6,7 +6,7 @@ categories: [transcripts, Dhamma Talk]
 tags: [transcripts]
 image: "https://i.ytimg.com/vi/PMStMEyN0YU/maxresdefault.jpg"
 description: "Transcript of April 18, 2021 Dhamma Talk with Dhammarato and Friends"
-pubDate: 2021-04-18
+pubDate: 2021-03-27
 featured: false
 hidden: false
 toc: true

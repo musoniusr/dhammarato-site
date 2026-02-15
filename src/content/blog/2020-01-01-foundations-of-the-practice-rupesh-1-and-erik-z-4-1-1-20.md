@@ -6,7 +6,7 @@ categories: [transcripts, Dhamma Talk]
 tags: [transcripts]
 image: "https://i.ytimg.com/vi/-qxiH7JKyPY/maxresdefault.jpg"
 description: "Transcript of January 03, 2020 Dhamma Talk with Dhammarato and Friends"
-pubDate: 2020-01-03
+pubDate: 2020-01-01
 featured: false
 hidden: false
 toc: true

@@ -6,7 +6,7 @@ categories: [transcripts, Dhamma Talk]
 tags: [transcripts]
 image: "https://i.ytimg.com/vi/jRPCfxGs2VU/maxresdefault.jpg"
 description: "Transcript of July 15, 2020 Dhamma Talk with Dhammarato and Friends"
-pubDate: 2020-07-15
+pubDate: 2020-07-09
 featured: false
 hidden: false
 toc: true

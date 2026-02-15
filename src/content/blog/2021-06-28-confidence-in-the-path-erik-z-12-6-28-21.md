@@ -6,7 +6,7 @@ categories: [transcripts, Dhamma Talk]
 tags: [transcripts]
 image: "https://i.ytimg.com/vi/PZXbZtzHMIE/maxresdefault.jpg"
 description: "Transcript of July 12, 2021 Dhamma Talk with Dhammarato and Friends"
-pubDate: 2021-07-12
+pubDate: 2021-06-28
 featured: false
 hidden: false
 toc: true

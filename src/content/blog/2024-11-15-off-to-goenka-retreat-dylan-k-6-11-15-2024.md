@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Off to Goenka Retreat Dylan K 6 11 15 2024"
-pubDate: 2020-11-15
+pubDate: 2024-11-15
 author: Dhammarato
 categories: [transcripts, Dhamma Talk]
 tags: [transcripts, one-on-one, anapanasati, vipassana, sati, dukkha, samadhi, hindrances, brahma-viharas, meditation, mindfulness, compassion, relaxation, positive-attitude, gladdening-the-mind, brightening-the-mind, insight, goenka-retreat, critique, anapanasati-sutta, satipatthana]
