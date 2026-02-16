@@ -6,7 +6,7 @@ author: Dhammarato
 categories: [transcripts, Dhamma Talk]
 tags: [transcripts, gradual-path, noble-eightfold-path, immediate-path, dukkha, sukkha, jhana, anapanasati, sati, vipassana, samadhi, sila, hindrances, unwholesome-thoughts, change-model, present-moment, seclusion, sangha-us, meditation, mindfulness, ethics, joy, compassion]
 image: "https://i.ytimg.com/vi/L2noFdjzcHs/maxresdefault.jpg"
-description: "Transcript of February 14, 2026 Dhamma Talk with Dhammarato and Friends"
+description: "Transcript of February 14, 2026 Dhamma talk with Dhammarato and Friends"
 featured: false
 hidden: false
 toc: true
